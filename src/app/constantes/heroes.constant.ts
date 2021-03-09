@@ -1,4 +1,4 @@
-import { Heroe } from "./Heroe.interface";
+import { Heroe } from "../interfaces/heroe.interface";
 
 
 export const HEROES: Heroe[] = [
@@ -7,7 +7,7 @@ export const HEROES: Heroe[] = [
     {id: 3,nombre: 'Gatubela'},
     {id: 4,nombre: 'Ironman'},
     {id: 5,nombre: 'Hulk'}, 
-    {id: 6,nombre: 'Mujer maravilla'},
+    {id: 6,nombre: 'Mujer Maravilla'},
     {id: 7,nombre: 'Robin'},
     {id: 8,nombre: 'Thor'},
     {id: 9,nombre: 'Arrow'},

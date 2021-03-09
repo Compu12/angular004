@@ -1,7 +1,7 @@
 <h2>Lista Heroes</h2>
 
 <ul class="heroes" >
-    <li *ngFor="let item of heroes" (click)="capturarHeroe(item)">
+    <li *ngFor="let item of heroes" (click)="capturarHeroe(item)" [ngClass]="{'selected': item===heroe}">
         <span class="badge">{{item.id}}</span> {{ item.nombre }}
     </li>
 </ul>
@@ -14,5 +14,5 @@
 
 <div>
     <label for="nombre">Nombre del Heroe</label>
-    <input type="text" id="nombre" [(ngModel)]="heroe.nombre" placeholder="Nombre">
+    <input type="text" id="nombre" [(ngModel)]="heroe.nombre" placeholder="Nombre"  >
 </div>

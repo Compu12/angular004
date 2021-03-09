@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Heroe } from '../Heroe.interface';
-import {HEROES} from '../constanteheroes'
+import { Heroe } from '../../interfaces/heroe.interface';
+import {HEROES} from '../../constantes/heroes.constant'
 
 @Component({
   selector: 'app-heroes',
@@ -23,6 +23,9 @@ export class HeroesComponent implements OnInit {
   }
   capturarHeroe(heroe:Heroe):void{
     this.heroe=heroe;
+
+
+
   }
 
 }
