@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { Heroe } from '../../interfaces/heroe.interface';
 import {HEROES} from '../../constantes/heroes.constant'
 
@@ -15,6 +15,8 @@ export class HeroesComponent implements OnInit {
     nombre:'Superman'
   };
 
+  heroeSeleccionado?:Heroe;
+  
   heroes:Heroe[]=HEROES;
 
   constructor() { }
@@ -22,9 +24,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   }
   capturarHeroe(heroe:Heroe):void{
-    this.heroe=heroe;
-
-
+    this.heroeSeleccionado=heroe;
 
   }
 
