@@ -9,6 +9,7 @@ import { Heroe } from 'src/app/interfaces/heroe.interface';
 export class DetalleheroeComponent implements OnInit {
 
   @Input() heroe?:Heroe;
+  @Input() parametro?:string;
 
   constructor() { }
 

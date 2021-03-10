@@ -16,7 +16,7 @@ export class HeroesComponent implements OnInit {
   };
 
   heroeSeleccionado?:Heroe;
-  
+  parametro:string="Hola"
   heroes:Heroe[]=HEROES;
 
   constructor() { }
