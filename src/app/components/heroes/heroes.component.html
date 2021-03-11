@@ -1,9 +1,9 @@
 <h2>Lista Heroes</h2>
 
 <ul class="heroes" >
-    <li *ngFor="let item of heroes" (click)="capturarHeroe(item)" [ngClass]="{'selected': item===heroeSeleccionado}">
+    <li *ngFor="let item of heroes" (click)="capturarHeroe(item)" [ngClass]="{'selected': item===heroeSrv.heroeSeleccionado}">
         <span class="badge">{{item.id}}</span> {{ item.nombre }}
     </li>
 </ul>
 
-<app-detalle-heroe [heroe]="heroeSeleccionado" [parametro]="parametro"></app-detalle-heroe>
+<app-detalle-heroe  [parametro]="parametro"></app-detalle-heroe>

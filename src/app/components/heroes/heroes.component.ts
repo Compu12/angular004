@@ -1,6 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Heroe } from '../../interfaces/heroe.interface';
-import {HEROES} from '../../constantes/heroes.constant'
 import { HeroeService } from 'src/app/services/heroe.service';
 
 @Component({
@@ -11,25 +10,30 @@ import { HeroeService } from 'src/app/services/heroe.service';
 export class HeroesComponent implements OnInit {
 
 
-  heroe:Heroe={
-    id:1, 
-    nombre:'Superman'
-  };
+ /*  heroe: Heroe = {
+    id: 1,
+    nombre: 'Superman'
+  }; */
 
-  heroeSeleccionado?:Heroe;
-  parametro:string="Hola"
+ // heroeSeleccionado?: Heroe;
+  parametro: string = "Hola"
   /* heroes:Heroe[]=HEROES; */
 
-  heroes:Heroe[]=[]
-  constructor( private HeroeSrv:HeroeService ) {
-    this.heroes=HeroeSrv.getHeroes();
-  }
+  public heroes: Heroe[] = []
 
+  constructor(private heroeSrv: HeroeService) {
+  }
+  
   ngOnInit(): void {
+    this.getHeroes();
   }
-  capturarHeroe(heroe:Heroe):void{
-    this.heroeSeleccionado=heroe;
+  
+  capturarHeroe(heroe: Heroe): void {
+    this.heroeSrv.heroeSeleccionado=heroe;
+  }
 
+  getHeroes():void{
+    this.heroes = this.heroeSrv.getHeroes();
   }
 
 }
