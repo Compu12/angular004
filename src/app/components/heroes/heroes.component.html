@@ -1,7 +1,7 @@
 <h2>Lista Heroes</h2>
 
 <ul class="heroes" >
-    <li *ngFor="let item of heroes" (click)="capturarHeroe(item)" [ngClass]="{'selected': item===heroe}">
+    <li *ngFor="let item of heroes" (click)="capturarHeroe(item)" [ngClass]="{'selected': item===heroeSeleccionado}">
         <span class="badge">{{item.id}}</span> {{ item.nombre }}
     </li>
 </ul>
